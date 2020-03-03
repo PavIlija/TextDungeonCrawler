@@ -9,19 +9,19 @@
 class Player : public GameCharacter
 {
     public:
-            Room currentRoo;
-            Room previousRoom;
+            Room * currentRoom;
+            Room * previousRoom;
 
             vector<Item> invenotory;
 
-            Player(string,int,int,int);
+            Player(string ="",int = 0,int=0,int=0);
 
             void addItem(Item);
             void increaseStats(int,int,int);
 
             void lootRoom(Room *);
 
-            void changeRooms(Room);
+            void changeRooms(Room *);
 };
 
 #endif
